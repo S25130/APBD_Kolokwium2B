@@ -15,9 +15,9 @@ public class Customer
     
     [MaxLength(100)]
     public string LastName { get; set; }
-    
-    [MaxLength(100)]
-    public string PhoneNumber { get; set; }
+
+    [MaxLength(100)] 
+    public string PhoneNumber { get; set; } = null;
     
     public ICollection<Customer> Customers { get; set; } = null!;
 }
