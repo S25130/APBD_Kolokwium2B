@@ -15,4 +15,6 @@ public class PurchasedTickets
 
     public TicketConcert TicketConcert { get; set; } = null!;
     public Customer Customer { get; set; } = null!;
+    public int TicketConcertId { get; set; }
+    public int CustomerId { get; set; }
 }
