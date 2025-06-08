@@ -10,24 +10,5 @@ namespace S25130_kol2B.Controllers;
 [Route("api/[controller]")]
 public class CustomerController : ControllerBase
 {
-    private readonly IDbService _dbService;
-
-    public OrdersController(IDbService dbService)
-    {
-        _dbService = dbService;
-    }
-
-    [HttpGet("{id}")]
-    public async Task<IActionResult> GetOrder(int id)
-    {
-        try
-        {
-            var order = await _dbService.GetOrderById(id);
-            return Ok(order);
-        }
-        catch (NotFoundException e)
-        {
-            return NotFound();
-        }
-    }
+    
 }
